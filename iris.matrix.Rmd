@@ -1,0 +1,55 @@
+```{r}
+library(dplyr)
+```
+
+```{r}
+data(iris)
+```
+
+```{r}
+head(iris)
+```
+```{r}
+mean(iris$Sepal.Length)
+mean(iris$Sepal.Width)
+mean(iris$Petal.Length)
+mean(iris$Petal.Width)
+```
+```{r}
+var(iris$Sepal.Length)
+var(iris$Sepal.Width)
+var(iris$Petal.Length)
+var(iris$Petal.Width)
+```
+```{r}
+sd(iris$Sepal.Length)
+sd(iris$Sepal.Width)
+sd(iris$Petal.Length)
+sd(iris$Petal.Width)
+```
+```{r}
+iris_subset <- iris[1:10, ]
+```
+
+```{r}
+dissimilarity_matrix <- as.matrix(dist(iris_subset))
+dissimilarity_matrix
+```
+
+```{r}
+cosine_matrix <- as.matrix(1 - dist(iris_subset))
+cosine_matrix
+```
+
+```{r}
+form <- matrix(c("Mean", "Variance", "Standard Deviation","dissimilarity_matrix","cosine_matrix", mean, var, sd, dissimilarity_matrix, cosine_matrix), nrow = 5)
+form
+```
+```{r}
+names(form) <- "ANKITA VASHISHT"
+```
+
+```{r}
+View(form)
+```
+
